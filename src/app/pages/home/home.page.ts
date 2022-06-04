@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  num = 1;
+  data = new Date();
+  currentHuer = String(this.data. getDate()).padStart(2,'0');
 
   constructor() {}
 
