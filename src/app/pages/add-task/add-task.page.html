@@ -10,4 +10,19 @@
 
   <ion-title>Add task</ion-title>
 
+  <div class="create-contacts">
+    <form #form="ngForm" class="create-contacts-form">
+      <input required name="title" placeholder="Título" [(ngModel)]="task.title"  type="text" />
+      <input required name="description" placeholder="Descrição" [(ngModel)]="task.description"  type="text" />
+      <input required name="endDate" placeholder="Data final" [(ngModel)]="task.endDate"  type="date" />
+      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
+      <input required name="importanceLevel" [(ngModel)]="task.importanceLevel"  type="radio" value="high" id="high"/>
+      <label for="high"></label>
+      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
+      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
+
+      <button [disabled]="form.invalid" (click)="onSubmit()">salvar Contato</button>
+    </form>
+  </div>
+
 </ion-content>
