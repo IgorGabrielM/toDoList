@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  data = new Date();
-  currentHuer = String(this.data. getDate()).padStart(2,'0');
+  date = new Date();
+  week = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'];
+  currentDay = String(this.date. getDate()).padStart(2,'0');
+  dayOfWeek = this.week[this.date.getDay()];
 
   constructor() {}
 
