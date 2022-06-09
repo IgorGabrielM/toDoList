@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "igorgab.profissional@gmail.com",
+      "password ": "json-server",
+      "username": "typicode",
+      "image": "typicode",
+      "friends": [
+        "Dantas",
+        "Digas",
+        "Migas"
+      ],
+      "phone": "19996064757"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Lavar pratos",
+      "description": "Lavar os pratos da cozinha",
+      "ownerId": "1",
+      "deadLine": "2020-06-09",
+      "is_finished": false,
+      "criticalityLevel": {
+        "id": 2,
+        "criticality": "Normal"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Comprar frutas",
+      "description": "",
+      "children": [
+        {
+          "id": "1",
+          "title": "Comprar maçuaina",
+          "ownerId": "2",
+          "deadLine": "2020-06-09",
+          "is_finished": false,
+          "criticalityLevel": {
+            "id": 1,
+            "criticality": "Low"
+          }
+        },
+        {
+          "id": "2",
+          "title": "Comprar baunaina",
+          "ownerId": "2",
+          "deadLine": "2020-06-09",
+          "is_finished": false,
+          "criticalityLevel": {
+            "id": 1,
+            "criticality": "Low"
+          }
+        }
+      ]
+    }
+  ],
+  "category": [
+    {
+      "name": "Mercado",
+      "colour": "Red"
+    },
+    {
+      "name": "Fazer",
+      "colour": "Blue"
+    }
+  ]
+}

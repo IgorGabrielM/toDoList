@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs';
-import {ITaskService, TaskModel} from "../model/task.model";
-import {HttpClient} from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { ITaskService, TaskModel } from '../model/task.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class TaskService extends ITaskService{
-
-  baseUrl = 'http://localhost:4200';
+export class TaskService extends ITaskService {
+  baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {
     super();
@@ -24,7 +23,7 @@ export class TaskService extends ITaskService{
     return this.http.get<TaskModel>(`${this.baseUrl}/phonebook/${id}`);
   }
 
-  updateTask(contact: TaskModel): Observable<TaskModel> {
+  updatedTask(contact: TaskModel): Observable<TaskModel> {
     return this.http.put<TaskModel>(`${this.baseUrl}/phonebook/${contact.id}`, contact);
   }
 

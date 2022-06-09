@@ -17,11 +17,13 @@
       <input required name="endDate" placeholder="Data final" [(ngModel)]="task.endDate"  type="date" />
       <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
       <input required name="importanceLevel" [(ngModel)]="task.importanceLevel"  type="radio" value="high" id="high"/>
-      <label for="high"></label>
-      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
-      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel"  type="text" />
+      <label for="high">Alta</label>
+      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel" value="normal" id="normal" type="text" />
+      <label for="normal">Normal</label>
+      <input required name="importanceLevel" placeholder="" [(ngModel)]="task.importanceLevel" value="low" id="low" type="text" />
+      <label for="low">Normal</label>
 
-      <button [disabled]="form.invalid" (click)="onSubmit()">salvar Contato</button>
+      <button [disabled]="form.invalid" (click)="onSubmit()">salvar tarefa</button>
     </form>
   </div>
 

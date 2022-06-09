@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AddTaskPage } from './add-task.page';
 
-import { Tab3PageRoutingModule } from './add-task-routing.module';
+import { AddTaskRoutingModules } from './add-task.routing.modules';
 
 @NgModule({
   imports: [
@@ -13,8 +13,10 @@ import { Tab3PageRoutingModule } from './add-task-routing.module';
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: AddTaskPage }]),
-    Tab3PageRoutingModule,
+    AddTaskRoutingModules,
   ],
-  declarations: [AddTaskPage]
+  declarations: [AddTaskPage],
+  exports: [AddTaskPage],
 })
-export class AddTaskModule {}
+export class AddTaskModule {
+}
