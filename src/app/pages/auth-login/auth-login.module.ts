@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddTaskPageRoutingModule } from './add-task-routing.module';
+import { AuthLoginPageRoutingModule } from './auth-login-routing.module';
 
-import { AddTaskPage } from './add-task.page';
+import { AuthLoginPage } from './auth-login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddTaskPageRoutingModule
+    AuthLoginPageRoutingModule
   ],
-  declarations: [AddTaskPage]
+  declarations: [AuthLoginPage]
 })
-export class AddTaskPageModule {}
+export class AuthLoginPageModule {}
