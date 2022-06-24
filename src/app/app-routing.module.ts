@@ -13,7 +13,20 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfilePageModule)
-  }
+  },
+  {
+    path: 'auth-register',
+    loadChildren: () => import('./pages/auth-register/auth-register.module').then( m => m.AuthRegisterPageModule)
+  },
+  {
+    path: 'auth-login',
+    loadChildren: () => import('./pages/auth-login/auth-login.module').then( m => m.AuthLoginPageModule)
+  },
+  {
+    path: 'add-task',
+    loadChildren: () => import('./pages/add-task/add-task.module').then( m => m.AddTaskPageModule)
+  },
+
 ];
 @NgModule({
   imports: [
